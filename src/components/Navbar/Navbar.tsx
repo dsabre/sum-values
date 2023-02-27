@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react';
-import styles from './Navbar.module.scss';
 import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import { LS_PALETTE_MODE_KEY } from '../../App';
@@ -20,26 +19,24 @@ const Navbar: FC<NavbarProps> = (props) => {
   }
 
   return (
-    <div className={styles.Navbar}>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Number sum calculator
-            </Typography>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              color="inherit"
-              onClick={togglePaletteMode}
-            >
-              {paletteMode === 'light' && <DarkMode />}
-              {paletteMode === 'dark' && <LightMode />}
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Number sum calculator
+          </Typography>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            color="inherit"
+            onClick={togglePaletteMode}
+          >
+            {paletteMode === 'light' && <DarkMode />}
+            {paletteMode === 'dark' && <LightMode />}
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 
