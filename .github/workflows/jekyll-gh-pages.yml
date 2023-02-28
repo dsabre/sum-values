@@ -35,7 +35,7 @@ jobs:
       - name: Install and build
         run: |
           pnpm install --frozen-lockfile
-          pnpm build
+          pnpm build-github-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
