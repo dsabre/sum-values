@@ -1,5 +1,3 @@
-import React, {useEffect, useState} from 'react';
-import Navbar from './components/Navbar';
 import {
     Box,
     Card,
@@ -12,6 +10,8 @@ import {
     Typography,
     createTheme
 } from '@mui/material';
+import React, {useEffect, useState} from 'react';
+import Navbar from './components/Navbar';
 
 export const LS_PALETTE_MODE_KEY = 'paletteMode';
 
